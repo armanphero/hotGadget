@@ -2,6 +2,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useContext, useState } from 'react'
 import { CartContext } from '../App';
 import { useNavigate } from 'react-router-dom';
+import { ShoppingCartIcon } from '@heroicons/react/24/solid';
 
 const MyModal = () => {
     const [productsInDb] = useContext(CartContext);
@@ -90,7 +91,8 @@ const MyModal = () => {
                                                 }, 500);
                                             }}
                                         >
-                                            Got it, thanks!
+                                            Go to
+                                            <ShoppingCartIcon className='ml-1 h-5 w-5 text-gray-400-400' />
                                         </button>
                                         <button
                                             type="button"
